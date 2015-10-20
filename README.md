@@ -20,6 +20,32 @@ $ npm install reset-date-cache
 $ npm test
 ```
 
+## Example
+
+```js
+const reset = require('reset-date-cache')
+const assert = require('assert')
+
+var d = new Date('10/20/2015 8:50:00 AM UTC')
+var orig = d.toString()
+
+process.env.TZ = 'US/Hawaii'
+reset()
+
+var d2 = new Date('10/20/2015 8:50:00 AM UTC')
+assert.equal(d2.toString(), 'Mon Oct 19 2015 22:50:00 GMT-1000 (HST)')
+
+delete process.env.TZ
+
+reset()
+
+var d3 = new Date('10/20/2015 8:50:00 AM UTC')
+assert.equal(d3.toString(), orig)
+
+reset()
+```
+
+
 ## Author
 
 Evan Lucas
