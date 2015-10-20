@@ -1,0 +1,27 @@
+{
+  "name": "reset-date-cache",
+  "version": "1.0.0",
+  "description": "Reset V8&#x27;s date cache on demand",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js --cov"
+  },
+  "dependencies": {
+    "bindings": "~1.2.1"
+  },
+  "devDependencies": {
+    "nan": "~2.1.0",
+    "node-gyp": "~3.0.3",
+    "tap": "~2.1.0"
+  },
+  "license": "MIT",
+  "author": "Evan Lucas <evanlucas@me.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanlucas/reset-date-cache"
+  },
+  "homepage": "https://github.com/evanlucas/reset-date-cache",
+  "bugs": {
+    "url": "https://github.com/evanlucas/reset-date-cache/issues"
+  }
+}
