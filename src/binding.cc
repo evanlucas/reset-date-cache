@@ -1,6 +1,7 @@
 #include <nan.h>
 #include <node.h>
 #include <v8.h>
+#include <time.h>
 
 using v8::Date;
 using v8::FunctionTemplate;
@@ -12,6 +13,11 @@ using Nan::Set;
 
 NAN_METHOD(Reset) {
   Isolate *isolate = Isolate::GetCurrent();
+#ifdef _WIN32
+  _tzset();
+#else
+  tzset();
+#endif
   Date::DateTimeConfigurationChangeNotification(isolate);
 }
 
