@@ -5,6 +5,7 @@
       "<!(node -e \"require('nan')\")"
     ],
     "sources": [
+      "src/monitor.cc",
       "src/binding.cc"
     ]
   }]
