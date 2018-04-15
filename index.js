@@ -1,5 +1,7 @@
 'use strict'
 
-const bindings = require('bindings')('resetdatecache')
+var bindings = require('bindings')('resetdatecache');
 
 module.exports = bindings.reset
+
+module.exports.registerHook = bindings.setHook;
