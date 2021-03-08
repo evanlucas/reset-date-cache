@@ -18,7 +18,7 @@ NAN_METHOD(Reset) {
 #else
   tzset();
 #endif
-  Date::DateTimeConfigurationChangeNotification(isolate);
+  isolate->DateTimeConfigurationChangeNotification(Isolate::TimeZoneDetection::kRedetect);
 }
 
 NAN_MODULE_INIT(Init) {
