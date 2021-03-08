@@ -13,7 +13,7 @@ test('should be able to reset the timezone', function(t) {
   reset()
 
   var d2 = new Date('10/20/2015 8:50:00 AM UTC')
-  t.equal(d2.toString(), 'Mon Oct 19 2015 22:50:00 GMT-1000 (HST)')
+  t.equal(d2.toString(), 'Mon Oct 19 2015 22:50:00 GMT-1000 (Hawaii-Aleutian Standard Time)')
 
   delete process.env.TZ
 
