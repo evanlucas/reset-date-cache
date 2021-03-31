@@ -1,6 +1,6 @@
 {
   "name": "reset-date-cache",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Reset V8's date cache on demand",
   "main": "index.js",
   "scripts": {
