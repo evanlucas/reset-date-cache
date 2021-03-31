@@ -17,6 +17,7 @@ $ npm install reset-date-cache
 ## Test
 
 ```bash
+$ npm i
 $ npm test
 ```
 
