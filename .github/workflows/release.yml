@@ -1,0 +1,25 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          check-latest: true
+      - run: npm install
+      - run: npx -p semantic-release@17 -p @evanlucas/semrel semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+          GIT_AUTHOR_NAME: 'A simple bot'
+          GIT_AUTHOR_EMAIL: 'simplesaurus@evanlucas.com'
+          GIT_COMMITTER_NAME: 'A simple bot'
+          GIT_COMMITTER_EMAIL: 'simplesaurus@evanlucas.com'
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
