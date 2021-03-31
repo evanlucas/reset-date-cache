@@ -11,7 +11,7 @@
     "nan": "^2.3.3"
   },
   "devDependencies": {
-    "tap": "^14.11.0"
+    "tap": "^15.0.0"
   },
   "license": "MIT",
   "author": "Evan Lucas <evanlucas@me.com>",
